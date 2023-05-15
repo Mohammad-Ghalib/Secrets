@@ -12,6 +12,7 @@ const findOrCreate = require("mongoose-findorcreate");
 
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 //console.log(process.env.API);
 
@@ -231,6 +232,6 @@ app.get("/auth/google/secrets",
 });
 
 
-app.listen(3000, function(){
-    console.log("Server running on port 3000");
+app.listen(PORT, function(){
+    console.log(`Server running on port ${PORT}`);
 });
